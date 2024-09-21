@@ -101,7 +101,7 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://arxiv.org/pdf/2312.05447.pdf" target="_blank"
+                    <a href="https://github.com/MSA-LMC/S2D" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -154,8 +154,35 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
+            Dynamic facial expression recognition (DFER) in
+            the wild is still hindered by data limitations, e.g., insufficient
+            quantity and diversity of pose, occlusion and illumination, as
+            well as the inherent ambiguity of facial expressions. In contrast,
+            static facial expression recognition (SFER) currently shows much
+            higher performance and can benefit from more abundant highquality training data. Moreover, the appearance features and
+            dynamic dependencies of DFER remain largely unexplored.
+            Recognizing the potential in leveraging SFER knowledge for
+            DFER, we introduce a novel Static-to-Dynamic model (S2D) that
+            leverages existing SFER knowledge and dynamic information
+            implicitly encoded in extracted facial landmark-aware features,
+            thereby significantly improving DFER performance. Firstly, we
+            build and train an image model for SFER, which incorporates
+            a standard Vision Transformer (ViT) and Multi-View Complementary Prompters (MCPs) only. Then, we obtain our video
+            model (i.e., S2D), for DFER, by inserting Temporal-Modeling
+            Adapters (TMAs) into the image model. MCPs enhance facial
+            expression features with landmark-aware features inferred by an
+            off-the-shelf facial landmark detector. And the TMAs capture and
+            model the relationships of dynamic changes in facial expressions,
+            effectively extending the pre-trained image model for videos.
+            Notably, MCPs and TMAs only increase a fraction of trainable
+            parameters (less than +10%) to the original image model.
+            Moreover, we present a novel Emotion-Anchors (i.e., reference
+            samples for each emotion category) based Self-Distillation Loss
+            to reduce the detrimental influence of ambiguous emotion labels,
+            further enhancing our S2D. Experiments conducted on popular
+            SFER and DFER datasets show that we have achieved a new
+            state of the art.
+            </p>
         </div>
       </div>
     </div>
@@ -205,81 +232,6 @@
 
 
 
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
@@ -297,9 +249,16 @@
         <div class="content">
 
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+            @ARTICLE{10663980,
+              author={Chen, Yin and Li, Jia and Shan, Shiguang and Wang, Meng and Hong, Richang},
+              journal={IEEE Transactions on Affective Computing}, 
+              title={From Static to Dynamic: Adapting Landmark-Aware Image Models for Facial Expression Recognition in Videos}, 
+              year={2024},
+              volume={},
+              number={},
+              pages={1-15},
+              keywords={Adaptation models;Videos;Computational modeling;Feature extraction;Transformers;Task analysis;Face recognition;Dynamic facial expression recognition;emotion ambiguity;model adaptation;transfer learning},
+              doi={10.1109/TAFFC.2024.3453443}}
           </p>
 
         </div>
